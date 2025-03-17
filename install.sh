@@ -34,6 +34,12 @@ mkdir -p ~/.config/wezterm
 mkdir -p ~/.config/karabiner/assets/complex_modifications
 mkdir -p ~/.config/warp/themes
 
+# Remover qualquer configuração relacionada ao oh-my-zsh
+if [ -d "$HOME/.oh-my-zsh" ]; then
+  echo "⚠️ Oh-My-Zsh detectado. Este setup usa Powerlevel10k diretamente com ZSH."
+  echo "   Não será feita nenhuma alteração na instalação existente do Oh-My-Zsh."
+fi
+
 # Link para arquivos na HOME
 echo "🔗 Criando links simbólicos para arquivos na HOME..."
 ln -sf "$PWD/home/.zshrc" ~/.zshrc

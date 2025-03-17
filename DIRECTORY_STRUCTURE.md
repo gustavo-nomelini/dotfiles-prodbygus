@@ -40,13 +40,16 @@ dotfiles-prodbygus/
 1. **Pastas XDG-compliant**: Seguimos o padrão XDG Base Directory Specification sempre que possível, 
    colocando configurações em `~/.config/` quando o aplicativo suporta.
 
-2. **HOME direta apenas quando necessário**: Alguns arquivos precisam estar diretamente em `~/` 
+2. **ZSH Nativo com Powerlevel10k**: Usamos ZSH nativo com Powerlevel10k direto, sem depender do framework 
+   Oh-My-Zsh, para uma configuração mais leve e rápida.
+
+3. **HOME direta apenas quando necessário**: Alguns arquivos precisam estar diretamente em `~/` 
    por convenção ou limitação dos aplicativos.
 
-3. **Arquivos de templates separados**: Mantemos templates e snippets reutilizáveis separados 
+4. **Arquivos de templates separados**: Mantemos templates e snippets reutilizáveis separados 
    da configuração principal.
 
-4. **Scripts em seu próprio diretório**: Scripts de instalação e configuração são mantidos em `scripts/`.
+5. **Scripts em seu próprio diretório**: Scripts de instalação e configuração são mantidos em `scripts/`.
 
 ## Instalação
 
