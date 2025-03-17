@@ -1,0 +1,51 @@
+---
+default:
+  initial_working_directory: "~"
+  keybindings:
+    - action: "ToggleFullScreen"
+      key: "f"
+      modifier: "META | SHIFT"
+    - action: "ReloadConfig"
+      key: "r"
+      modifier: "META | SHIFT"
+    - action: "NavigationHistoryPrevious"
+      key: "k"
+      modifier: "META"
+    - action: "NavigationHistoryNext"
+      key: "j"
+      modifier: "META"
+    - action: "SplitHorizontal"
+      key: "d"
+      modifier: "META | SHIFT"
+    - action: "SplitVertical"
+      key: "d"
+      modifier: "META"
+    - action: "QuickSelectPreviousCommand"
+      key: "p"
+      modifier: "CONTROL"
+  warp_hooks:
+    pre_startup: null
+    post_startup:
+      - "eval $(keychain --eval --quiet id_rsa id_ed25519 2>/dev/null)"
+  env_vars:
+    - name: "EDITOR"
+      value: "nvim"
+    - name: "BAT_THEME"
+      value: "tokyonight_night"
+    - name: "TERM"
+      value: "warp-terminal"
+  font_config:
+    family: "MesloLGS NF"
+    size: 14
+  theme_config:
+    theme_name: "nightfox"
+    active_tab_color: "#B388FF"
+    inactive_tab_color: "#475F7E"
+    tab_bar_background_color: "#011628"
+  ui_config:
+    enable_click_to_open_links: true
+    enable_fps_counter: false
+    enable_tab_bar: true
+    enable_tooltips: true
+    show_tabs_in_titlebar: false
+    stretch_to_fill_width: true

@@ -1,0 +1,31 @@
+{
+  "title": "Tab as Hyperkey",
+  "rules": [
+    {
+      "description": "Tab to Hyper Key (⌘+⌥+⌃+⇧) when held, Tab when tapped",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "tab"
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "modifiers": [
+                "left_command",
+                "left_control",
+                "left_option"
+              ]
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "tab"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
